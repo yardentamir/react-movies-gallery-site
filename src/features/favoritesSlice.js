@@ -52,14 +52,12 @@ export const fetchFavorites = createAsyncThunk(
   "popular/fetchFavorites",
   async ({ favoritesIds, newIds }, { getState }) => {
     const state = getState().favorite;
-    // TODO: fix this - if has new ids then fetch all of them
-    console.log("getting...", state.counter);
-    const containsAllValues = newIds.every((value) =>
+    if (favoritesIds?.length <= 0 || !favoritesIds) return null;
+    const containsAllValues = newIds?.every((value) =>
       favoritesIds.includes(value)
     );
     if (containsAllValues && state.counter > 1) return state.movies;
 
-    if (favoritesIds?.length <= 0 || !favoritesIds) return null;
     console.log("new ids", newIds);
     const res = await Promise.all(
       newIds.map(async (id) => {
