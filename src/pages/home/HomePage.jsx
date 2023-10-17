@@ -3,7 +3,7 @@ import Loader from "components/Loader/Loader";
 import MovieCard from "components/MovieCard/MovieCard";
 import Radio from "components/Radio/Radio";
 import RadioItem from "components/Radio/RadioItem";
-import { withMoviesSlice } from "../../services/withMoviesSlice";
+import { withMoviesSlice } from "services/withMoviesSlice";
 import "./HomePage.css";
 import { filterArray } from "./constants";
 
@@ -49,4 +49,4 @@ export const HomePage = ({ movies, status, error, onChangeFilter }) => {
 
 const HomePageWithMovieSlice = withMoviesSlice(HomePage);
 
-export default HomePageWithMovieSlice;
+export const HomePageWithMovieSlice;
