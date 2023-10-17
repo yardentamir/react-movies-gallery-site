@@ -17,15 +17,14 @@
 
 .single-movie-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
   align-items: center;
+  gap: 30px;
+  padding: 50px;
 }
 
 .single-movie-container div:not(.loader) {
   text-align: start;
+  align-self: start;
 }
 
 .single-movie-container .image-container {
@@ -61,5 +60,10 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding: unset;
+  }
+
+  .single-movie-container .image-container {
+    margin: 0 auto;
   }
 }
