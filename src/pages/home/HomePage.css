@@ -1,0 +1,22 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}
+
+.sticky-controllers {
+  position: sticky;
+  top: 60px;
+
+  padding: 8px 0;
+  z-index: 1;
+  /* width: calc(100% + 4rem - 20px); */
+  /* margin-left: -2rem; */
+}
