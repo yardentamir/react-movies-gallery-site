@@ -49,4 +49,4 @@ export const HomePage = ({ movies, status, error, onChangeFilter }) => {
 
 const HomePageWithMovieSlice = withMoviesSlice(HomePage);
 
-export const HomePageWithMovieSlice;
+export default HomePageWithMovieSlice;
