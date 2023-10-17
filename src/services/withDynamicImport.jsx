@@ -1,5 +1,5 @@
-import Loader from 'components/Loader/Loader';
 import React, { Suspense } from 'react';
+import Loader from '../components/Loader/Loader';
 
 function withDynamicImport(importComponent) {
   const LazyComponent = React.lazy(importComponent);

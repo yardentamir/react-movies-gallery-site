@@ -1,9 +1,9 @@
-import Error from "components/Error/Error";
-import Loader from "components/Loader/Loader";
-import { fetchMovie, selectMovie } from "features/movieSlice";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import Error from "../../components/Error/Error";
+import Loader from "../../components/Loader/Loader";
+import { fetchMovie, selectMovie } from "../../features/movieSlice";
 import MovieDetails from "./MovieDetails";
 import "./MoviePage.css";
 

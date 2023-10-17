@@ -1,6 +1,6 @@
-import Button from "components/Button/Button";
-import { actions as favoriteActions } from "features/favoritesSlice";
 import { useEffect, useState } from "react";
+import Button from "../../components/Button/Button";
+import { actions as favoriteActions } from "../../features/favoritesSlice";
 import "./MovieDetails.css";
 
 export default function MovieDetails({ movie }) {

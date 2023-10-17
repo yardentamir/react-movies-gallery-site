@@ -1,9 +1,9 @@
-import Error from "components/Error/Error";
-import Loader from "components/Loader/Loader";
-import MovieCard from "components/MovieCard/MovieCard";
-import Radio from "components/Radio/Radio";
-import RadioItem from "components/Radio/RadioItem";
-import { withMoviesSlice } from "services/withMoviesSlice";
+import Error from "../../components/Error/Error";
+import Loader from "../../components/Loader/Loader";
+import MovieCard from "../../components/MovieCard/MovieCard";
+import Radio from "../../components/Radio/Radio";
+import RadioItem from "../../components/Radio/RadioItem";
+import { withMoviesSlice } from "../../services/withMoviesSlice";
 import "./HomePage.css";
 import { filterArray } from "./constants";
 

@@ -1,6 +1,6 @@
 
 import { useNavigate } from 'react-router-dom';
-import { DETAILS_PATH } from "routes/routes.constants";
+import { DETAILS_PATH } from "../../routes/routes.constants";
 import "./MovieCard.css";
 
 export default function MovieCard({ movie }) {

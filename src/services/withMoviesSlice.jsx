@@ -1,11 +1,8 @@
-import { actions as favoriteActions } from "features/favoritesSlice";
-import { actions as nowPlayingActions } from "features/nowPlayingSlice";
-import { actions as popularActions } from "features/popularSlice";
 import { useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchFavorites } from "../features/favoritesSlice";
-import { fetchNowPlaying } from "../features/nowPlayingSlice";
-import { fetchPopular } from "../features/popularSlice";
+import { actions as favoriteActions, fetchFavorites } from "../features/favoritesSlice";
+import { fetchNowPlaying, actions as nowPlayingActions } from "../features/nowPlayingSlice";
+import { fetchPopular, actions as popularActions } from "../features/popularSlice";
 import { FAVORITE, NOW_PLAYING, POPULAR } from "../pages/home/constants";
 
 export function withMoviesSlice(WrappedComponent) {
@@ -18,10 +15,8 @@ export function withMoviesSlice(WrappedComponent) {
 
     const favoritesIds = JSON.parse(sessionStorage.getItem("favorites"));
     const newIds = favoritesIds?.filter((id) => !state.movies?.includes(id));
-    // console.log("New IDs in the second array:", newIds);
 
     useEffect(() => {
-      console.log("sending...", state.counter)
       switch (selectedFilter) {
 
         case POPULAR:
