@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import withDynamicImport from "services/withDynamicImport";
+import withDynamicImport from "../services/withDynamicImport";
 import { DETAILS_PATH, HOME_PATH } from "./routes.constants";
 
 export default function MyRoutes() {
