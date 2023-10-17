@@ -1,10 +1,12 @@
 import { Route, Routes } from "react-router-dom";
+// import HomePage from "../pages/home/HomePage";
+// import MoviePage from '../pages/movie/MoviePage';
 import withDynamicImport from "../services/withDynamicImport";
 import { DETAILS_PATH, HOME_PATH } from "./routes.constants";
 
 export default function MyRoutes() {
-  const HomePage = withDynamicImport(() => import('pages/Home/HomePage'));
-  const MoviePage = withDynamicImport(() => import('pages/Movie/MoviePage'));
+  const HomePage = withDynamicImport(() => import('pages/home/HomePage'));
+  const MoviePage = withDynamicImport(() => import('pages/movie/MoviePage'));
 
   return (
     <Routes>
